@@ -1,17 +1,7 @@
-	# <QUESTION 1>
-
-	# Given a string, return the boolean True if it ends in "py", and False if not. Ignore Case.
-
-	# <EXAMPLES>
-
-	# endsDev("ilovepy") → True
-	# endsDev("welovepy") → True
-	# endsDev("welovepyforreal") → False
-	# endsDev("pyiscool") → False
-
-	# <HINT>
-
-	# What was the name of the function we have seen which changes the case of a string?  Use your CLI to access the Python documentation and get help(str).
-    
+#!/usr/bin/env python3
 def endsPy(input):
-	return False
+    for i in range(len(input)):
+        if input[i-1] == "y" or input[i-1] == "Y" and input[i-2] == "p"  or input[i-2] =="P":
+	        return True
+        else:
+            return False
